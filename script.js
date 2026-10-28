@@ -438,6 +438,8 @@ const ages = [
 ];
 console.log(ages);
 */
+
+/*
 const friends = ["A Sai", "A Rambo", "A Shilpa"];
 
 // Add Elements
@@ -466,4 +468,209 @@ console.log(friends.includes(24));
 
 if (friends.includes("A Rambo")) {
   console.log("You have a friend called A Rambo");
+}
+*/
+/*
+const saiArray = [
+  "Sai",
+  "Manohar",
+  2026 - 2001,
+  "Unemployed",
+  ["Rambo", "Hari", "AVR"],
+];
+
+const sai = {
+  firstName: "A Sai",
+  lastName: "Manohar",
+  age: 2026 - 2001,
+  job: "Unemployed",
+  friends: ["A Rambo", "P Hari", "A VR"],
+};
+
+console.log(sai);
+console.log(sai.lastName);
+console.log(sai["lastName"]);
+
+const nameKey = "Name";
+console.log(sai["first" + nameKey]);
+console.log(sai["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Sai? Choose between firstName, lastName, age, job, and friends",
+);
+
+if (sai[interestedIn]) {
+  console.log(sai[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName, lastName, age, job, and friends",
+  );
+}
+
+sai.location = "Hyderabad, TG, India";
+sai["instagram"] = "@saimanohar_hm";
+console.log(sai);
+
+// Challenge
+// 'Sai has 3 friends, and his best friend is A Rambo.'
+console.log(
+  `${sai.firstName} has ${sai.friends.length} friends, and his best is ${sai.friends[0]}`,
+);
+*/
+/*
+const sai = {
+  firstName: "A Sai",
+  lastName: "Manohar",
+  age: 2026 - 2001,
+  birthYear: 2001,
+  job: "Unemployed",
+  friends: ["A Rambo", "P Hari", "A VR"],
+  hasDriversLicense: false,
+
+  // calcAge: function () {
+  //   console.log(this);
+  //   return 2026 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    console.log(this);
+    this.age = 2026 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} year old ${sai.job}, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+  },
+};
+
+// const calcAge = function (birthYear) {
+//   return 2026 - birthYear;
+// };
+console.log(sai);
+console.log(sai.calcAge());
+console.log(sai["calcAge"]());
+console.log(sai.age);
+console.log(sai);
+
+// Challenge
+// 'A Sai is a 25-year old Unemployed, and he has a driver's license.'
+
+console.log(sai.getSummary());
+*/
+
+// console.log("Lifting weights repetition 1 🏋️‍♂️");
+// console.log("Lifting weights repetition 2 🏋️‍♂️");
+// console.log("Lifting weights repetition 3 🏋️‍♂️");
+// console.log("Lifting weights repetition 4 🏋️‍♂️");
+// console.log("Lifting weights repetition 5 🏋️‍♂️");
+// console.log("Lifting weights repetition 6 🏋️‍♂️");
+// console.log("Lifting weights repetition 7 🏋️‍♂️");
+// console.log("Lifting weights repetition 8 🏋️‍♂️");
+// console.log("Lifting weights repetition 9 🏋️‍♂️");
+// console.log("Lifting weights repetition 10 🏋️‍♂️");
+
+// for loop keeps running while CONDITION is TRUE
+// for (let rep = 1; rep <= 30; rep++) {
+//   console.log(`Lifting weights repetition ${rep}🏋️‍♂️`);
+// }
+/*
+const saiArray = [
+  "Sai",
+  "Manohar",
+  2026 - 2001,
+  "Unemployed",
+  ["Rambo", "Hari", "AVR"],
+  true,
+];
+
+const types = [];
+
+// console.log(sai[0]);
+// console.log(sai[1]);
+// ...
+// console.log(sai[4]);
+// sai[5] does NOT Exist
+
+for (let i = 0; i < saiArray.length; i++) {
+  // Reading from sai array
+  console.log(saiArray[i], typeof saiArray[i]);
+
+  // Filling types array
+  // types[i] = typeof saiArray[i];
+  types.push(typeof saiArray[i]);
+}
+
+console.log(types);
+
+const years = [2001, 2005, 2009, 2013, 2019, 2023];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2026 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log("------ ONLY STRINGS -------");
+for (let i = 0; i < saiArray.length; i++) {
+  // Reading from sai array
+  if (typeof saiArray[i] !== "string") continue;
+  console.log(saiArray[i], typeof saiArray[i]);
+
+  // Filling types array
+  // types[i] = typeof saiArray[i];
+  // types.push(typeof saiArray[i]);
+}
+
+console.log("------ BREAK WITH NUMBER -------");
+for (let i = 0; i < saiArray.length; i++) {
+  // Reading from sai array
+  if (typeof saiArray[i] === "number") break;
+  console.log(saiArray[i], typeof saiArray[i]);
+}
+*/
+
+const saiArray = [
+  "Sai",
+  "Manohar",
+  2026 - 2001,
+  "Unemployed",
+  ["Rambo", "Hari", "AVR"],
+  true,
+];
+
+// 0,1,...,4
+// 4,3,....,0
+/*
+for (let i = saiArray.length - 1; i >= 0; i--) {
+  console.log(i, saiArray[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`----------- Starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Lifting weight repetition ${rep} 🏋️‍♂️`);
+  }
+}
+*/
+
+// for loop keeps running while CONDITION is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+  console.log(`Lifting weights repetition ${rep}🏋️‍♂️`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♂️`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Loop is about to end....");
 }
